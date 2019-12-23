@@ -1,0 +1,40 @@
+<div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">Sales By Company</h5>
+        </div>
+        <div class="card-body" ng-show="!isLoading">
+              <div class="chart" style="display: block">
+              <canvas baseChart
+                [data]="pieChartData"
+                [labels]="pieChartLabels"
+                [chartType]="pieChartType"
+                [options]="pieChartOptions"
+                [plugins]="pieChartPlugins"
+                [colors]="pieChartColors"
+                [legend]="pieChartLegend">
+              </canvas>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Sales Rank</th>
+                            <th>Company</th>
+                            <th>Sale Count</th>
+                            <th>AvgPerCadet</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let cs of companyStats$; let i = index">
+                            <td>{{i + 1}}</td>
+                            <td>{{cs.Company}}</td>
+                            <td>{{cs.SaleCount}}</td>
+                            <td>{{cs.AvgPerCadet}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

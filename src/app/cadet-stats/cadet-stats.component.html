@@ -1,0 +1,27 @@
+<div class="card">
+        <div class="card-header">
+            <h5 class="mb-0">Sales By Cadet</h5>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Sales Rank</th>
+                            <th>Cadet</th>
+                            <th>Company</th>
+                            <th>Sale Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let cs of cadetStats$; let i = index">
+                            <td>{{i + 1}}</td>
+                            <td>{{cs.Cadet}}</td>
+                            <td>{{cs.Company}}</td>
+                            <td>{{cs.SaleCount}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
