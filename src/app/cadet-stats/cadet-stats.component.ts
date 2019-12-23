@@ -20,7 +20,7 @@ interface CadetStats {
 })
 export class CadetStatsComponent implements OnInit {
 
-cadetStats$: Observable<CadetStats[]>;
+cadetStats$: CadetStats[];
 
   constructor(private http:HttpClient) { }
 

@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import * as _ from 'lodash';
 import { first, take, map } from 'rxjs/operators';
 import 'rxjs/add/operator/map'
+import { ChartOptions, ChartType } from 'chart.js';
+import { Label } from 'ng2-charts';
 
 interface CompanyStats {
     Company: string;
@@ -20,7 +21,7 @@ interface CompanyStats {
 })
 export class CompanyStatsComponent implements OnInit {
 
-companyStats$: Observable<CompanyStats[]>;
+companyStats$: CompanyStats[];
 //ng2-Chart ====>
   public pieChartOptions: ChartOptions = {
     responsive: true,
