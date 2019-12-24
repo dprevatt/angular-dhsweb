@@ -9,10 +9,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CadetStatsComponent } from './cadet-stats/cadet-stats.component';
 import { CompanyStatsComponent } from './company-stats/company-stats.component';
+import { TicketcountersComponent } from './ticketcounters/ticketcounters.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule, HttpClientModule, ChartsModule ],
-  declarations: [ AppComponent, HomeComponent, CadetStatsComponent, CompanyStatsComponent ],
+  declarations: [ AppComponent, HomeComponent, CadetStatsComponent, CompanyStatsComponent, TicketcountersComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

@@ -1,3 +1,4 @@
+import { TicketcountersComponent } from './../ticketcounters/ticketcounters.component';
     import { RouterModule, Routes } from '@angular/router';
     import { NgModule } from '@angular/core';
     import { HomeComponent } from '../home/home.component';
@@ -20,6 +21,10 @@
         {
             path: 'CompanyStats',
             component: CompanyStatsComponent,
+        },
+        {
+            path: "TicketCounters",
+            component: TicketcountersComponent
         }
     ];
 
